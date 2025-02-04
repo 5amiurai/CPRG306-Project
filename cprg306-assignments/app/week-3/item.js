@@ -1,11 +1,10 @@
-import React from 'react';
-
-export default function Item (name, quantity, category){
+export default function Item({ item }) {
   return (
-    <li className="flex justify-between items-center border-b py-2">
-      <span className="font-semibold">{name}</span>
-      <span className="ml-4 text-gray-700">{quantity}</span>
-      <span className="ml-4 text-gray-500 italic">{category}</span>
-    </li>
+    <div className="bg-black p-4 rounded-xl shadow-md border-l-4 border-blue-500">
+      <h3 className="text-lg font-bold text-white-800">{item.name}</h3>
+      <p className="text-white-600"><strong>Quantity:</strong> {item.quantity}</p>
+      <p className="text-white-600"><strong>Category:</strong> {item.category}</p>
+    </div>
   );
-};
+}
+

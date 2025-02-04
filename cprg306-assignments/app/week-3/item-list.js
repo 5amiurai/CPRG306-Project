@@ -1,78 +1,54 @@
-import item from './item'
+// import Item from "./item";
 
-export default function ItemList() {
-    const items = [
-      {
-        name: "milk, 4 L 🥛",
-        quantity: 1,
-        category: "dairy",
-      },
-      {
-        name: "bread 🍞",
-        quantity: 2,
-        category: "bakery",
-      },
-      {
-        name: "eggs, dozen 🥚",
-        quantity: 2,
-        category: "dairy",
-      },
-      {
-        name: "bananas 🍌",
-        quantity: 6,
-        category: "produce",
-      },
-      {
-        name: "broccoli 🥦",
-        quantity: 3,
-        category: "produce",
-      },
-      {
-        name: "chicken breasts, 1 kg 🍗",
-        quantity: 1,
-        category: "meat",
-      },
-      {
-        name: "pasta sauce 🍝",
-        quantity: 3,
-        category: "canned goods",
-      },
-      {
-        name: "spaghetti, 454 g 🍝",
-        quantity: 2,
-        category: "dry goods",
-      },
-      {
-        name: "toilet paper, 12 pack 🧻",
-        quantity: 1,
-        category: "household",
-      },
-      {
-        name: "paper towels, 6 pack",
-        quantity: 1,
-        category: "household",
-      },
-      {
-        name: "dish soap 🍽️",
-        quantity: 1,
-        category: "household",
-      },
-      {
-        name: "hand soap 🧼",
-        quantity: 4,
-        category: "household",
-      },
-    ];
-  
-    return (
-      <main>
-        {items.map((item, index) => (
-          <div key={index}>
-            <h3>{item.name}</h3>
-            <p>Quantity: {item.quantity}</p>
-            <p>Category: {item.category}</p>
-          </div>
-        ))}
-      </main>
-    );
-  }
+// export default function ItemList() {
+//   const items = [
+//     { name: "Milk, 4 L 🥛", quantity: 1, category: "Dairy" },
+//     { name: "Bread 🍞", quantity: 2, category: "Bakery" },
+//     { name: "Eggs, dozen 🥚", quantity: 2, category: "Dairy" },
+//     { name: "Bananas 🍌", quantity: 6, category: "Produce" },
+//     { name: "Broccoli 🥦", quantity: 3, category: "Produce" },
+//     { name: "Chicken breasts, 1 kg 🍗", quantity: 1, category: "Meat" },
+//     { name: "Pasta sauce 🍝", quantity: 3, category: "Canned Goods" },
+//     { name: "Spaghetti, 454 g 🍝", quantity: 2, category: "Dry Goods" },
+//     { name: "Toilet paper, 12 pack 🧻", quantity: 1, category: "Household" },
+//     { name: "Dish soap 🍽️", quantity: 1, category: "Household" },
+//     { name: "Hand soap 🧼", quantity: 4, category: "Household" },
+//   ];
+
+//   return (
+//     <main>
+//       {items.map((item, index) => (
+//         <Item key={index} item={item} />
+//       ))}
+//     </main>
+//   );
+// }
+
+
+import Item from "./item"
+
+export default function itemList(){
+  const items = [
+    { name: "Milk, 4 L 🥛", quantity: 1, category: "Dairy" },
+    { name: "Bread 🍞", quantity: 2, category: "Bakery" },
+    { name: "Eggs, dozen 🥚", quantity: 2, category: "Dairy" },
+    { name: "Bananas 🍌", quantity: 6, category: "Produce" },
+    { name: "Broccoli 🥦", quantity: 3, category: "Produce" },
+    { name: "Chicken breasts, 1 kg 🍗", quantity: 1, category: "Meat" },
+    { name: "Pasta sauce 🍝", quantity: 3, category: "Canned Goods" },
+    { name: "Spaghetti, 454 g 🍝", quantity: 2, category: "Dry Goods" },
+    { name: "Toilet paper, 12 pack 🧻", quantity: 1, category: "Household" },
+    { name: "Dish soap 🍽️", quantity: 1, category: "Household" },
+    { name: "Hand soap 🧼", quantity: 4, category: "Household" },
+  ];
+
+
+return(
+  <main>
+    {items.map((item,index) => (
+      <Item key={index} item={item} />
+    ))}
+  </main>
+
+)
+}

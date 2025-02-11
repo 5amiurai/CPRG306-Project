@@ -1,12 +1,20 @@
+"user client";
 // item-list.js
-import Item from './item';
+import React from "react";
+import Item from "./item";
 
 const ItemList = ({ items, onItemSelect }) => {
   return (
     <div>
       <ul>
-        {items.map((item, index) => (
-          <Item key={index} name={item.name} category={item.category} onSelect={onItemSelect} />
+        {items.map((item) => (
+          <Item
+            key={item.id}
+            name={item.name}
+            quantity={item.quantity}
+            category={item.category}
+            onSelect={onItemSelect}
+          />
         ))}
       </ul>
     </div>

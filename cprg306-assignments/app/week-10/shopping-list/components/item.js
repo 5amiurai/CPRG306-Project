@@ -1,4 +1,3 @@
-// item.js
 const Item = ({ name, quantity, category, onSelect }) => {
   return (
     <li
